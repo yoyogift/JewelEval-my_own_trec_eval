@@ -27,6 +27,7 @@ Puisque trec_eval m’a planté comme un GPS en zone sans réseau, j’ai décid
 
 ```
 python make_relevance_jewelstar.py
+
 ```
 
 该脚本会读取 STARD/data/example/dev.query.txt 与 STARD/data/queries.json，输出去重、排序后的：
@@ -40,7 +41,14 @@ python make_relevance_jewelstar.py
 ## 2.生成检索结果文件 bm25p.run.jewelstar
 
 ```
+# 手写bm25版本
 python make_run_jewelstar.py
+# 标准bm25库版本
+python make_run_standard_bm25.py
+# tf-idf版本
+python make_tfidf_run.py
+# query likelihood版本
+python make_ql_run.py
 ```
 
 该脚本会：
@@ -60,6 +68,8 @@ python make_run_jewelstar.py
 python evaluate_metrics.py \
   --relevance relevance.jewelstar \
   --run      bm25p.run.jewelstar
+
+# bm25p.run.jewelstar这里修改成对应生成的run文件
 ```
 
 默认会计算并打印：
@@ -104,3 +114,6 @@ ndcg_cut_10 all 0.3084
 trec_eval -m all_qrels qrels.trec bm25p.run
 
 核对关键指标是否完全一致。
+
+## 5. 待改进的点
+形成一个通用的make_run脚本
