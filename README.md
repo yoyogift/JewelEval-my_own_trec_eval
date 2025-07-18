@@ -25,9 +25,9 @@ Puisque trec_eval m’a planté comme un GPS en zone sans réseau, j’ai décid
 
 ## 1. 生成相关性标注文件 relevance.jewelstar
 
-
+```
 python make_relevance_jewelstar.py
-
+```
 
 该脚本会读取 STARD/data/example/dev.query.txt 与 STARD/data/queries.json，输出去重、排序后的：
 
