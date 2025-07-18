@@ -31,7 +31,9 @@ python make_relevance_jewelstar.py
 
 该脚本会读取 STARD/data/example/dev.query.txt 与 STARD/data/queries.json，输出去重、排序后的：
 
-/<qid/> 0 /<docid/> 1'
+```
+<qid> 0 <docid> 1
+```
 
 格式文件 relevance.jewelstar。
 
