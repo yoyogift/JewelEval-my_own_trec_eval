@@ -97,7 +97,7 @@ ndcg_cut_10 all 0.3084
 
 ## 4. 验证与对比
 
-    若你仍可使用官方 trec_eval，可将 relevance.jewelstar 重命名为 qrels.trec，bm25p.run.jewelstar命名为bm25p.run并用：
+若你仍可使用官方 trec_eval，可将 relevance.jewelstar 重命名为 qrels.trec，bm25p.run.jewelstar命名为bm25p.run并用：
 
 trec_eval -m all_qrels qrels.trec bm25p.run
 
